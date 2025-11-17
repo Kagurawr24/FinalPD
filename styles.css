@@ -347,6 +347,7 @@ video {
 body.immtech-page {
     margin: 0; /* Reset default browser margin */
     padding: 0; /* Reset default browser padding */
+    color: #D8E8FF; /* Set text color for better readability */
 }
 
 /* Header without fixed positioning */
@@ -395,17 +396,29 @@ body.immtech-page {
     align-items: center;
 }
 
-/* Individual project card styles for all except .small-project */
-.immtech-page .room1, 
-.immtech-page .room2, 
-.immtech-page .room3-end {
-    width: 100%;
-    max-width: 800px;
-    margin: 10px;
-    text-align: center;
+/* Container for all VR content */
+.immtech-page .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Videos row */
+.immtech-page .vr-videos video {
+    width: 300px;      /* All videos same width */
+    height: 200px;     /* All videos same height */
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(10, 35, 75, 0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.immtech-page .vr-text h3 {
+    font-weight: bold;
+}
+
+.immtech-page .vr-text p {
+    color: #D8E8FF;
+    text-align: left;
 }
 
 /* Specific styles for .small-project */
@@ -421,9 +434,7 @@ body.immtech-page {
 
 /* Hover effect for all project cards */
 .immtech-page .small-project:hover, 
-.immtech-page .room1:hover, 
-.immtech-page .room2:hover, 
-.immtech-page .room3-end:hover {
+.immtech-page .vr-videos:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
     box-shadow: 0 0 5px rgba(124, 163, 193, 0.8), /* Light glow */
                 0 0 10px rgba(70, 130, 180, 0.8); /* Stronger glow */;
@@ -460,7 +471,7 @@ body.coding-page {
     margin: 0;
     padding: 0;
     background-color: #294f70; /* Match the blue background */
-    color: #000000; 
+    color: #D8E8FF; 
 }
 
 /* Container for images in the project */
@@ -521,7 +532,7 @@ body.design-page {
     margin: 0;
     padding: 0;
     background-color: #294f70; /* Match the blue background from coding-page */
-    color: #000000;
+    color: #D8E8FF;
 }
 
 /* Title styling for the design page */
@@ -570,7 +581,7 @@ body.design-page {
     margin: 0;
     padding: 0;
     background-color: #294f70; /* Match the blue background from coding-page */
-    color: #000000;
+    color: #D8E8FF;
 }
 
 /* Title styling for the design page */
@@ -624,7 +635,7 @@ body.design-page {
 .design-page .project p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #000000; /* Match the body text color */
+    color: #D8E8FF; /* Match the body text color */
 }
 
 /* Back link styles for the design page */
